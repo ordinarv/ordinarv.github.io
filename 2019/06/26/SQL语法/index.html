@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="SQL,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="SQL(Structured Query Language)目录  SQL概述(一些相关概念) 数据查询 数据更新 插入INSERT 更新UPDATE 删除DELETE   视图">
+<meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/06/26/hello-world/index.html">
+<meta property="og:title" content="SQL语法">
+<meta property="og:url" content="http://yoursite.com/2019/06/26/SQL语法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="SQL(Structured Query Language)目录  SQL概述(一些相关概念) 数据查询 数据更新 插入INSERT 更新UPDATE 删除DELETE   视图">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-26T15:33:11.763Z">
+<meta property="og:updated_time" content="2019-06-26T15:41:14.708Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="SQL语法">
+<meta name="twitter:description" content="SQL(Structured Query Language)目录  SQL概述(一些相关概念) 数据查询 数据更新 插入INSERT 更新UPDATE 删除DELETE   视图">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/06/26/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/26/SQL语法/">
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>SQL语法 | Hexo</title>
   
 
 
@@ -232,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/26/SQL语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">SQL语法</h1>
         
 
         <div class="post-meta">
@@ -261,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-26T22:47:42+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-26T23:35:19+08:00">
                 2019-06-26
               </time>
             
@@ -299,21 +300,85 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <h1 id="SQL-Structured-Query-Language"><a href="#SQL-Structured-Query-Language" class="headerlink" title="SQL(Structured Query Language)"></a>SQL(Structured Query Language)</h1><p><strong>目录</strong></p>
+<ol>
+<li>SQL概述(一些相关概念)</li>
+<li>数据查询</li>
+<li>数据更新<ol>
+<li>插入INSERT</li>
+<li>更新UPDATE</li>
+<li>删除DELETE</li>
+</ol>
+</li>
+<li>视图</li>
+</ol>
 <a id="more"></a>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>SQL是应用于数据库的结构化查询语言，它是一种非过程性语言，不能脱离数据库存在。通常讲SQL语言分为以下4类:</p>
+</blockquote>
+<p><strong>1.DDL(Data Definition Language)数据定义语言</strong></p>
+<p>用于定义数据库<strong>对象</strong>。</p>
+<p><code>create drop alter</code></p>
+<p><strong>2.DML(Data Manipulation Language)数据操纵语言</strong></p>
+<p>用于对数据库中的<strong>数据</strong>进行修改、插入、删除等操作。</p>
+<p><code>insert update delete</code></p>
+<p><strong>3.DQL(Data Query Language)数据查询语言</strong></p>
+<p>用于对数据库中的数据进行查询操作</p>
+<p><code>select</code></p>
+<p><strong>4.DCL(Data Control Language)数据控制语言</strong></p>
+<p>用于控制用户对数据库的操作权限。</p>
+<p>PS：在T-SQL中语法不区分大小写。</p>
+<p>面向问题，只需要提出做什么即可，不用考虑过程</p>
+<p>对方的9个动词                                                                                                                                                                                                                                                                                                                 </p>
+<p>数据查询 select</p>
+<p>数据定义 create drop alter</p>
+<p>数据操控 insert update delete</p>
+<p>数据控制 grant revoke</p>
+<h3 id="对数据库的操作"><a href="#对数据库的操作" class="headerlink" title="对数据库的操作"></a>对数据库的操作</h3><p>1.创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> batabase db_name</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>2.修改数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">database</span> db_name</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>3.使用数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> db_name</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>USE语句只在第一次打开数据库时使用，后续操作都是在作用在该数据库中。如果要使用另一数据库，则需要重新使用USE打开另一数据库。</p>
+</blockquote>
+<p>4.删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> datebase db_name</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="基本表的定义、删除与修改"><a href="#基本表的定义、删除与修改" class="headerlink" title="基本表的定义、删除与修改"></a>基本表的定义、删除与修改</h3><p>一、创建基本表</p>
+<p>1.使用DDL创建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> &lt;tb_name&gt;</span><br><span class="line">(&lt;list_nm&gt;&lt;ds&gt;[列级完整性约束],</span><br><span class="line"> &lt;list_nm&gt;&lt;ds&gt;[列级完整性约束],</span><br><span class="line"> ...</span><br><span class="line"> &lt;表级完整性约束&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>2.由其它表创建新表</p>
+<blockquote>
+<p>用户使用<code>SELECT INTO</code>语句创建一个新表，并用<code>SELECT</code>的结果集填充该表。</p>
+</blockquote>
+<p>语法格式： <code>SELECT 列名表 INTO 表1 FROM 表2</code></p>
+<p>由“表2”的“列名表“来创建新表”表1”。</p>
+<p>实例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> stsc</span><br><span class="line"><span class="keyword">SELECT</span> stno,stnmae,stbirthday <span class="keyword">INTO</span> student1 <span class="keyword">FROM</span> student</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h2><blockquote>
+<p>SQL提供了<code>SELECT</code>语句进行</p>
+</blockquote>
+<ol>
+<li>表单查询</li>
+<li>连接查询</li>
+<li>嵌套查询</li>
+<li>集合查询</li>
+</ol>
+<h3 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h3><p>Task1 显示所有姓名以”A”开头的同学信息。</p>
+<p>使用通配符<code>Stud_Name like &#39;A%&#39;</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> Info <span class="keyword">where</span> Stud_Name <span class="keyword">like</span> <span class="string">'A%'</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>复习记录</p>
+<p>如何导入别人写好的数据库</p>
 
       
     </div>
@@ -329,6 +394,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
+          
+        </div>
+      
 
       
       
@@ -338,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/16/Do it/" rel="next" title="Do it">
-                <i class="fa fa-chevron-left"></i> Do it
+              <a href="/2019/06/26/Java复习/" rel="next" title="Java复习">
+                <i class="fa fa-chevron-left"></i> Java复习
               </a>
             
           </div>
@@ -347,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/26/Java复习/" rel="prev" title="Java复习">
-                Java复习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-Structured-Query-Language"><span class="nav-number">1.</span> <span class="nav-text">SQL(Structured Query Language)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对数据库的操作"><span class="nav-number">1.0.1.</span> <span class="nav-text">对数据库的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本表的定义、删除与修改"><span class="nav-number">1.0.2.</span> <span class="nav-text">基本表的定义、删除与修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据查询"><span class="nav-number">1.1.</span> <span class="nav-text">数据查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目实践"><span class="nav-number">1.1.1.</span> <span class="nav-text">项目实践</span></a></li></ol></li></ol></div>
             
 
           </div>
